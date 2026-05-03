@@ -2,7 +2,6 @@ package com.laxstat.scoreboard.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
 import com.laxstat.scoreboard.data.models.AppSettings
 import com.laxstat.scoreboard.data.models.TeamState
 import kotlinx.coroutines.flow.MutableStateFlow
