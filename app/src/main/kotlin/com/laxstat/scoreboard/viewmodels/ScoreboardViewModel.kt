@@ -31,8 +31,6 @@ class ScoreboardViewModel(application: Application) : AndroidViewModel(applicati
     fun awayShotIncrement() = _awayTeam.update { it.copy(shotsOnGoal = it.shotsOnGoal + 1) }
     fun awayShotDecrement() = _awayTeam.update { if (it.shotsOnGoal > 0) it.copy(shotsOnGoal = it.shotsOnGoal - 1) else it }
 
-    fun updateSettings(settings: AppSettings) = _settings.update { settings }
-
     fun applySettings(settings: AppSettings) {
         _settings.update { settings }
         _homeTeam.update { it.copy(name = settings.homeTeamName, colorCode = settings.homeTeamColor) }
